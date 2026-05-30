@@ -11,6 +11,7 @@ df = pd.read_csv('../astronauts.csv')
 
 # Variável discreta: Space Flights
 dados_discreto = df['Space Flights'].dropna().astype(int).tolist()
+print(dados_discreto)
 
 fi = pd.Series(Counter(dados_discreto)).sort_index()
 fia = fi.cumsum()
